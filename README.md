@@ -32,3 +32,5 @@ UPDATE pages/idea-list/idea-list.page.html
 5. Working with a Firestore Document
 UPDATE pages/idea-details/idea-details.page.ts
 UPDATE pages/idea-details/idea-details.page.html
+
+-->THIS WORKS VERY WELL
