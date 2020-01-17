@@ -27,4 +27,5 @@ UPDATE services/idea.service.ts
 
 4. Displaying a Firestore Collection List
 UPDATE pages/idea-list/idea-list.page.ts
+UPDATE pages/idea-list/idea-list.page.html
 
