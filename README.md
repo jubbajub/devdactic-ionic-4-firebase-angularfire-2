@@ -17,3 +17,6 @@ npm install firebase @angular/fire
 ionic g page pages/ideaList
 ionic g page pages/ideaDetails
 ionic g service services/idea
+
+ADD FIREBASE CONFIG
+UPDATE app.module.ts
