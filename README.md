@@ -21,3 +21,6 @@ ionic g service services/idea
 ADD FIREBASE CONFIG
 UPDATE app.module.ts
 UPDATE app/app-routing.module.ts
+
+3. Creating a Firebase Data Service
+UPDATE services/idea.service.ts
