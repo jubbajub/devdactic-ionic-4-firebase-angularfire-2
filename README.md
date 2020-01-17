@@ -29,3 +29,6 @@ UPDATE services/idea.service.ts
 UPDATE pages/idea-list/idea-list.page.ts
 UPDATE pages/idea-list/idea-list.page.html
 
+5. Working with a Firestore Document
+UPDATE pages/idea-details/idea-details.page.ts
+

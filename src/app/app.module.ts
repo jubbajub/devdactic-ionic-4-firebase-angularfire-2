@@ -23,7 +23,7 @@ import { AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/fi
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: FirestoreSettingsToken, useValue: {} }
   ],
   bootstrap: [AppComponent]
