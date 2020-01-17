@@ -24,3 +24,7 @@ UPDATE app/app-routing.module.ts
 
 3. Creating a Firebase Data Service
 UPDATE services/idea.service.ts
+
+4. Displaying a Firestore Collection List
+UPDATE pages/idea-list/idea-list.page.ts
+
