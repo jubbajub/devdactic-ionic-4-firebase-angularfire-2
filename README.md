@@ -20,3 +20,4 @@ ionic g service services/idea
 
 ADD FIREBASE CONFIG
 UPDATE app.module.ts
+UPDATE app/app-routing.module.ts
