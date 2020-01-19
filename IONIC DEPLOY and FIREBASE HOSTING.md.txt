@@ -1,0 +1,50 @@
+# https://devdactic.com/host-ionic-website-firebase/
+# https://firebase.google.com/docs/hosting/deploying?authuser=0#deploy
+
+
+1. https://console.firebase.google.com/
+-Projekt erstellen
+-eventuell "App hinzufügen" --> APP-ID: 1:518236795627:web:3e00adc143eedf273344ae
+
+2. Lokale Konsole im Projektordner:
+
+-ionic build
+wenn man nicht im Entwicklungsmodus ist, dann muss man noch  in src\environments\environment.ts:
+
+export const environment = {
+  production: false,
+   firebase: {
+    apiKey: "AIzaSyBMpOzwmXr3B1e_qiozmvN_NkXj9CridQQ",
+    authDomain: "devdacticshopping-8bab8.firebaseapp.com",
+    databaseURL: "https://devdacticshopping-8bab8.firebaseio.com",
+    projectId: "devdacticshopping-8bab8",
+    storageBucket: "devdacticshopping-8bab8.appspot.com",
+    messagingSenderId: "518236795627",
+    appId: "1:518236795627:web:4cfd5eb0021b1c2d3344ae"
+  }
+};
+
+anpassen!
+
+-
+
+firebase init
+Are you ready to proceed? (Y/n) Y
+>(*) Hosting: Configure and deploy Firebase Hosting sites 
+> Use an existing project
+
+? Please select an option: Use an existing project
+? Select a default Firebase project for this directory: ionicshoppinglist3 (DEVDACTIC)
+i  Using project ionicshoppinglist3 (DEVDACTIC)
+
+? What do you want to use as your public directory? www
+? Configure as a single-page app (rewrite all urls to /index.html)? Yes
+? File www/index.html already exists. Overwrite? (y/N) N
+
+firebase deploy
+=== Deploying to 'ionicshoppinglist3'...
+
++  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/ionicshoppinglist3/overview
+Hosting URL: https://ionicshoppinglist3.firebaseapp.com

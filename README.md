@@ -34,3 +34,12 @@ UPDATE pages/idea-details/idea-details.page.ts
 UPDATE pages/idea-details/idea-details.page.html
 
 -->THIS WORKS VERY WELL
+
+npm install firebase @angular/fire
+firebase init
+firebase deploy
+
+ionic build --prod
+git log --oneline
+
+-->THIS WORKS VERY WELL, weil npm install durchgeführt
