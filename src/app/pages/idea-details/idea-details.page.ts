@@ -32,7 +32,7 @@ export class IdeaDetailsPage implements OnInit {
   addIdea() {
     this.ideaService.addIdea(this.idea).then(() => {
       this.router.navigateByUrl('/');
-      this.showToast('Idea added');
+      this.showToast('Idea hinzugefügt');
     }, err => {
       this.showToast('There was a problem adding your idea :(');
     });
@@ -41,7 +41,7 @@ export class IdeaDetailsPage implements OnInit {
   deleteIdea() {
     this.ideaService.deleteIdea(this.idea.id).then(() => {
       this.router.navigateByUrl('/');
-      this.showToast('Idea deleted');
+      this.showToast('Idee gelöscht');
     }, err => {
       this.showToast('There was a problem deleting your idea :(');
     });
@@ -49,7 +49,8 @@ export class IdeaDetailsPage implements OnInit {
  
   updateIdea() {
     this.ideaService.updateIdea(this.idea).then(() => {
-      this.showToast('Idea updated');
+      this.router.navigateByUrl('/');
+      this.showToast('Idee gespeichert');
     }, err => {
       this.showToast('There was a problem updating your idea :(');
     });
@@ -58,7 +59,8 @@ export class IdeaDetailsPage implements OnInit {
   showToast(msg) {
     this.toastCtrl.create({
       message: msg,
-      duration: 2000
+      duration: 1200,
+      position: 'middle'
     }).then(toast => toast.present());
   }
 }
