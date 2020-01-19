@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "ionicshoppinglist3"
+    "default": "ionicshoppinglist3",
+    "aliasDevdactic": "devdacticshopping-8bab8"
   }
 }
