@@ -3,17 +3,50 @@
     <ion-title>Meine Ideen (Liste) Version CAche</ion-title>
   </ion-toolbar>
 </ion-header>
- 
+
 <ion-content class="ion-padding">
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button routerLink="/idea">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
- 
-  <ion-list>
-    <ion-item button [routerLink]="['/idea', idea.id]" *ngFor="let idea of (ideas | async)">
-      {{ idea.name }}
-    </ion-item>
-  </ion-list>
+
+
+<ion-item>
+  <ion-label>Gender</ion-label>
+  <ion-select [(ngModel)]="gender">
+    <option value="f">Female</option>
+    <option value="m">Male</option>
+  </ion-select>
+</ion-item>
+
+  <ul class="heroes">
+    <li *ngFor="let idea of (ideas | async), let i = index;">
+      <a [routerLink]="['/idea', idea.id]">
+        <span class="badge">{{i}}</span> {{idea.name}}
+      </a>
+
+    </li>
+  </ul>
+
+  <table class="blueTable">
+    <thead>
+      <tr>
+        <th *ngFor="let head of headIdeaElements" >{{head}} </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr   *ngFor="let idea of (ideas | async), let i = index;">
+        <th>      <a [routerLink]="['/idea', idea.id]">
+          {{i}}
+        </a></th>
+        <td>{{idea.name}}</td>
+        <td>{{idea.notes}}</td>
+        <td>{{idea.category}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
 </ion-content>
+

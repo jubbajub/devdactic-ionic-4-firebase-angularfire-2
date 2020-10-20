@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
 export interface Idea {
   id?: string,
   name: string,
-  notes: string
+  notes: string,
+  category: string
 }
  
 @Injectable({
@@ -48,7 +49,7 @@ export class IdeaService {
   }
  
   updateIdea(idea: Idea): Promise<void> {
-    return this.ideaCollection.doc(idea.id).update({ name: idea.name, notes: idea.notes });
+    return this.ideaCollection.doc(idea.id).update({ name: idea.name, notes: idea.notes, category: idea.category });
   }
  
   deleteIdea(id: string): Promise<void> {
