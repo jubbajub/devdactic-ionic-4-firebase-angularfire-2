@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Meine Ideen (Liste) Version CAche</ion-title>
+    <ion-title>Meine Ideen (Liste) Version CAche - Datum 2020-10-22</ion-title>
   </ion-toolbar>
 </ion-header>
  
@@ -11,9 +11,27 @@
     </ion-fab-button>
   </ion-fab>
  
-  <ion-list>
+<!--   <ion-list>
     <ion-item button [routerLink]="['/idea', idea.id]" *ngFor="let idea of (ideas | async)">
       {{ idea.name }}
     </ion-item>
-  </ion-list>
+  </ion-list> -->
+
+  <table class="paleBlueRows">
+    <thead>
+      <tr>
+        <th *ngFor="let head of headIdeaElements" >{{head}} </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr   *ngFor="let idea of (ideas | async), let i = index;">
+        <th>      <a [routerLink]="['/idea', idea.id]">
+          {{i}}
+        </a></th>
+        <td>{{idea.name}}</td>
+        <td>{{idea.notes}}</td>
+        <td>{{idea.category}}</td>
+      </tr>
+    </tbody>
+  </table> 
 </ion-content>
