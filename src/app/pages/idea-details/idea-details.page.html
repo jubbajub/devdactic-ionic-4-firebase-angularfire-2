@@ -16,7 +16,12 @@
  
   <ion-item>
     <ion-label position="stacked">Notes</ion-label>
-    <ion-textarea [(ngModel)]="idea.notes" rows="8"></ion-textarea>
+    <ion-textarea [(ngModel)]="idea.notes" rows="3"></ion-textarea>
+  </ion-item>
+   
+  <ion-item>
+    <ion-label position="stacked">Category</ion-label>
+    <ion-input [(ngModel)]="idea.category"></ion-input>
   </ion-item>
 </ion-content>
  

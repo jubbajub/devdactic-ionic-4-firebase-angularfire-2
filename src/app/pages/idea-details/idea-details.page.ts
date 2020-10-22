@@ -12,7 +12,8 @@ export class IdeaDetailsPage implements OnInit {
  
   idea: Idea = {
     name: '',
-    notes: ''
+    notes: '',
+    category: ''
   };
  
   constructor(private activatedRoute: ActivatedRoute, private ideaService: IdeaService,
